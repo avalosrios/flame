@@ -1,0 +1,15 @@
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+      <a [routerLink]="['Home']"class="pure-menu-heading" href="">{{title}}</a>
+
+      <ul class="pure-menu-list">
+          <li class="pure-menu-item pure-menu-selected"><a [routerLink]="['Users']" class="pure-menu-link">Users</a></li>
+          <li class="pure-menu-item"><a [routerLink]="['Login']" class="pure-menu-link">Login</a></li>
+          <li class="pure-menu-item"><a [routerLink]="['Register']" class="pure-menu-link">Sign Up</a></li>
+      </ul>
+  </div>
+</div>
+<div class="content-wrapper">
+  <!-- Router Content here -->
+  <router-outlet></router-outlet>
+</div>

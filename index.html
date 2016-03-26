@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+    <base href="/">
+    <title>Flame Project</title>
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script> <!-- this is needed for http requests -->
+
+
+
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+    <!-- Stylesheet references
+
+  -->
+  <link rel="stylesheet" href="/node_modules/purecss/build/base-min.css">
+  <link rel="stylesheet" href="/node_modules/purecss/build/pure-min.css">
+  <link rel="stylesheet" href="/node_modules/purecss/build/grids-min.css">
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
+
+</html>

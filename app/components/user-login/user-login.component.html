@@ -1,0 +1,26 @@
+<div class="user-login">
+  <!-- Create Form -->
+  <form class="pure-form pure-form-stacked"
+  *ngIf="active"
+  (ngSubmit)="onSubmit()"
+  #loginForm="ngForm"
+  >
+    <fieldset>
+      <legend>{{title}}</legend>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Email" required
+      ngControl="email" #email="ngForm">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Password" required
+      ngControl="password" #password="ngForm">
+
+      <button type="submit" class="pure-button pure-button-primary"
+        [disabled]="!loginForm.form.valid">
+        Log in
+      </button>
+    </fieldset>
+  </form>
+  <!-- End of Form -->
+</div>

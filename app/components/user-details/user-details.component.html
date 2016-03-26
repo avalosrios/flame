@@ -1,0 +1,16 @@
+<div class="user-details">
+  <h3>{{title}}</h3>
+  <button (click)="goBack()">Back</button>
+  <div *ngIf="user"
+    [ngSwitch]="editable">
+    <template [ngSwitchWhen]="false">
+      <h4>{{user.name}}</h4>
+      <span>{{user.email}}</span>
+      <button (click)="goEdit()">{{actionButtonText}}</button>
+    </template>
+    <template [ngSwitchWhen]="true">
+      <!-- TODO we should be reusing a form component here -->
+      <user-form [user]="user" (onSubmitEvent)="onSubmit($event)"></user-form>
+    </template>
+  </div>
+</div>

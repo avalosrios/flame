@@ -1,0 +1,53 @@
+<div  class="user-form"
+      [hidden]="submitted">
+  <!-- Create Form -->
+  <form *ngIf="active"
+        (ngSubmit)="onSubmit()"
+        #registerForm="ngForm"
+        class="pure-form pure-form-aligned">
+    <fieldset>
+      <legend>{{actionText}}</legend>
+
+      <div class="pure-control-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email" required
+        [(ngModel)]="user.email"
+        ngControl="email" #email="ngForm">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+
+      <div class="pure-control-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Name" required
+        [(ngModel)]="user.name"
+        ngControl="name" #name="ngForm">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="pure-control-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" required
+        [(ngModel)]="user.password"
+        ngControl="password">
+      </div>
+
+      <div class="pure-control-group"
+            *ngIf="new_user">
+        <label for="password_confirmation">Password Confirmation</label>
+        <input id="password_confirmation" type="password" placeholder="Password" required
+        ngControl="password_confirmation">
+      </div>
+
+      <div class="pure-controls">
+        <button type="submit" class="pure-button pure-button-primary"
+        [disabled]="!registerForm.form.valid">{{actionText}}</button>
+      </div>
+
+    </fieldset>
+  </form>
+  <!-- End of Form -->
+</div>
