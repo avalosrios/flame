@@ -1,15 +1,26 @@
-<div class="header">
-  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <a [routerLink]="['Home']"class="pure-menu-heading" href="">{{title}}</a>
-
-      <ul class="pure-menu-list">
-          <li class="pure-menu-item pure-menu-selected"><a [routerLink]="['Users']" class="pure-menu-link">Users</a></li>
-          <li class="pure-menu-item"><a [routerLink]="['Login']" class="pure-menu-link">Login</a></li>
-          <li class="pure-menu-item"><a [routerLink]="['Register']" class="pure-menu-link">Sign Up</a></li>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <!-- Responsive menu -->
+      </button>
+    </div>
+    <a [routerLink]="['Home']" class="navbar-brand" href="">{{title}}</a>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <!-- TODO show this only when logged -->
+        <li class=""><a [routerLink]="['Users']" class="">Users</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- TODO toggle this with logout -->
+        <li class=""><a [routerLink]="['Login']" class="">Login</a></li>
+        <li class=""><a [routerLink]="['Register']" class="">Sign Up</a></li>
+      </ul>
+    </div>
   </div>
-</div>
-<div class="content-wrapper">
+</nav>
+
+<div class="container app-container">
   <!-- Router Content here -->
   <router-outlet></router-outlet>
 </div>
