@@ -1,6 +1,6 @@
 <div class="user-login">
   <!-- Create Form -->
-  <form class="pure-form pure-form-stacked"
+  <form class=""
   *ngIf="active"
   (ngSubmit)="onSubmit()"
   #loginForm="ngForm"
@@ -8,10 +8,14 @@
     <fieldset>
       <legend>{{title}}</legend>
 
+      <div class="form-group">
+      </div>
       <label for="email">Email</label>
       <input id="email" type="email" placeholder="Email" required
       ngControl="email" #email="ngForm">
 
+      <div class="form-group">
+      </div>
       <label for="password">Password</label>
       <input id="password" type="password" placeholder="Password" required
       ngControl="password" #password="ngForm">

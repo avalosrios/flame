@@ -8,9 +8,9 @@
     <fieldset>
       <legend>{{actionText}}</legend>
 
-      <div class="pure-control-group">
+      <div class="form-group">
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Email" required
+        <input id="email" class="form-control" type="email" placeholder="Email" required
         [(ngModel)]="user.email"
         ngControl="email" #email="ngForm">
         <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="pure-control-group">
+      <div class="form-group">
         <label for="name">Name</label>
         <input id="name" type="text" placeholder="Name" required
         [(ngModel)]="user.name"
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="pure-control-group">
+      <div class="form-group">
         <label for="password">Password</label>
         <input id="password" type="password" placeholder="Password" required
         [(ngModel)]="user.password"
