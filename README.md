@@ -1,9 +1,10 @@
-# Angular 2 QuickStart Source
+# Flame project
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
+Basic user management project, this works as a vanilla front end for most
+common web app. It uses bootstrap and angular2.
 
-## Create a new project based on the QuickStart
+
+## Create a new project based on flame
 
 Clone this repo into new project folder (e.g., `my-proj`).
 ```bash
@@ -11,7 +12,7 @@ $ git clone  https://github.com/angular/quickstart  my-proj
 $ cd my-proj
 ```
 
-We have no intention of updating the source on `angular/quickstart`.
+We have no intention of updating the source
 Discard everything "git-like" by deleting the `.git` folder.
 ```bash
 $ rm -rf .git
@@ -56,3 +57,9 @@ Remember the npm scripts in `package.json`:
 with excellent support for Angular apps that use routing.
 * `npm run typings` - runs the typings tool.
 * `npm run postinstall` - called by *npm* automatically *after* it successfully completes package installation. This script installs the TypeScript definition files this app requires.
+
+
+### Note: Linux users ENOSPC ERROR.
+```
+$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
