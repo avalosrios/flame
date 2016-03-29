@@ -5,7 +5,10 @@ import {UserService} from '../../services/user.service';
 @Component({
   selector: 'user-login',
   templateUrl: 'app/components/user-login/user-login.component.html',
-  styleUrls: ['app/shared/assets/css/forms.css']
+  styleUrls: [
+    'app/shared/assets/styles/forms.css',
+    'app/components/user-login/user-login.component.css'
+  ]
 })
 
 export class UserLoginComponent{

@@ -11,7 +11,7 @@ import {UserFormComponent} from '../user-form/user-form.component';
   templateUrl: 'app/components/user-register/user-register.component.html',
   styleUrls: [
     'app/components/user-register/user-register.component.css',
-    'app/shared/assets/css/forms.css'
+    'app/shared/assets/styles/forms.css'
   ],
   directives: [
     UserFormComponent

@@ -1,6 +1,6 @@
 <div class="user-login">
   <!-- Create Form -->
-  <form class=""
+  <form class="jumbotron"
   *ngIf="active"
   (ngSubmit)="onSubmit()"
   #loginForm="ngForm"
@@ -9,18 +9,18 @@
       <legend>{{title}}</legend>
 
       <div class="form-group">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" class="form-control" type="email" placeholder="Email" required
+        ngControl="email" #email="ngForm">
       </div>
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Email" required
-      ngControl="email" #email="ngForm">
 
       <div class="form-group">
+        <label class="sr-only" for="password">Password</label>
+        <input id="password" class="form-control" type="password" placeholder="Password" required
+        ngControl="password" #password="ngForm">
       </div>
-      <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Password" required
-      ngControl="password" #password="ngForm">
 
-      <button type="submit" class="pure-button pure-button-primary"
+      <button type="submit" class="btn btn-primary btn-block"
         [disabled]="!loginForm.form.valid">
         Log in
       </button>

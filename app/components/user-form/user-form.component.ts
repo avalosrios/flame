@@ -6,7 +6,8 @@ import {User} from '../users/user';
   selector: 'user-form',
   templateUrl: 'app/components/user-form/user-form.component.html',
   styleUrls: [
-    'app/shared/assets/css/forms.css'
+    'app/shared/assets/styles/forms.css',
+    'app/components/user-form/user-form.component.css'
   ],
   inputs: ['user'],
   outputs: ['onSubmitEvent']

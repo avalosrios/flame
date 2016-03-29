@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Name" required
+        <input id="name" class="form-control" type="text" placeholder="Name" required
         [(ngModel)]="user.name"
         ngControl="name" #name="ngForm">
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
@@ -30,20 +30,20 @@
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Password" required
+        <input id="password" class="form-control" type="password" placeholder="Password" required
         [(ngModel)]="user.password"
         ngControl="password">
       </div>
 
-      <div class="pure-control-group"
+      <div class="form-group"
             *ngIf="new_user">
         <label for="password_confirmation">Password Confirmation</label>
-        <input id="password_confirmation" type="password" placeholder="Password" required
+        <input id="password_confirmation" class="form-control" type="password" placeholder="Password" required
         ngControl="password_confirmation">
       </div>
 
-      <div class="pure-controls">
-        <button type="submit" class="pure-button pure-button-primary"
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"
         [disabled]="!registerForm.form.valid">{{actionText}}</button>
       </div>
 
